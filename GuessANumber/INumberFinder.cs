@@ -10,6 +10,7 @@ namespace GuessANumber
     {
 
         void FindNumber(int[] arr, int target);
+        void UserHelpFindNumber(int[] arr, int target);
 
     }
 }

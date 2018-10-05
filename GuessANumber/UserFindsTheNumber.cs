@@ -28,6 +28,8 @@ namespace GuessANumber
             } while (!guessRight);
 
             Console.WriteLine($"Congratulations! You found the correct number in {counter} guesses!");
+            Console.ReadLine();
+            Console.Clear();
         }
 
 
