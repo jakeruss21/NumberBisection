@@ -43,8 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="INumberFinder.cs" />
+    <Compile Include="NumberFinder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserTargetInput.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
