@@ -33,8 +33,8 @@ namespace GuessANumber
                 else
                 {
                     found = true;
-                    Console.WriteLine("You found the number!");
-                    Console.WriteLine($"It is the number {target}");
+                    Console.WriteLine("I found your number!");
+                    Console.WriteLine($"Your number is the number {target}");
                 }
 
             }

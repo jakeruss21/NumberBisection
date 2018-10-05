@@ -30,12 +30,12 @@ namespace GuessANumber
                     }
                 } while (answer == false);
 
-                if (option < 0 || option > numOptions)
+                if (option < 1 || option > numOptions)
                 {
                     Console.Write("Please enter a valid option:  ");
                 }
                 else { }
-            } while (option < 0 || option > numOptions);
+            } while (option < 1 || option > numOptions);
 
             return option;
         }
