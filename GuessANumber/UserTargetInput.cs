@@ -14,6 +14,9 @@ namespace GuessANumber
             int target;
 
             Console.WriteLine($"Please enter a number between 1 and {length}");
+            target = UtilityHandler.ErrorHandler(length);
+
+            return target;
 
         }
 
