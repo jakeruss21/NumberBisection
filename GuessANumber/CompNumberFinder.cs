@@ -11,7 +11,7 @@ namespace GuessANumber
         public void FindNumber(int[] arr, int target)
         {
             int midpoint;
-            int first = 0;
+            int first = 1;
             int last = arr.Length;
             bool found = false;
             
@@ -45,7 +45,7 @@ namespace GuessANumber
 
         public void UserHelpFindNumber(int[] arr, int target)
         {
-            int first = 0;
+            int first = 1;
             int last = arr.Length;
             int midpoint;
             string answer = "";
