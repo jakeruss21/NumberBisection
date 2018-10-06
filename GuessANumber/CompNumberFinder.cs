@@ -50,6 +50,7 @@ namespace GuessANumber
             int midpoint;
             string answer = "";
             bool found = false;
+            bool goodAnswer = false;
             int counter = 0;
 
             Console.WriteLine("I will guess what number you chose, you tell me whether it is 'High', 'Low', or 'Correct'...");
@@ -57,23 +58,32 @@ namespace GuessANumber
             do
             {
                 midpoint = (first + last) / 2;
-                Console.WriteLine($"Is your number {midpoint}?\nEnter: High, Low, or Correct");
+                Console.WriteLine($"Is your number {midpoint}?");
                 answer = Console.ReadLine();
 
-                while (answer != "High" || answer != "Low" || answer != "Correct")
+                if (answer == "High" || answer == "Low" || answer == "Correct")
+                {
+                    goodAnswer = true;
+                }
+
+                while (!goodAnswer)
                 {
                     Console.WriteLine("The answer is case-sensative.  Please enter 'High', 'Low', or 'Correct'.");
                     answer = Console.ReadLine();
+                    if(answer == "High" || answer == "Low" || answer == "Correct")
+                    {
+                        goodAnswer = true;
+                    }
                 }
 
                 if (answer == "High")
                 {
-                    first = midpoint + 1;
+                    last = midpoint - 1;
                     found = false;
                 }
                 else if (answer == "Low")
                 {
-                    last = midpoint - 1;
+                    first = midpoint + 1;
                     found = false;
                 }
                 else if (answer == "Correct")
@@ -81,10 +91,13 @@ namespace GuessANumber
                     found = true;
                 }
 
+                goodAnswer = false;
                 counter++;
             } while (!found);
 
             Console.WriteLine($"Hooray! I found your number after {counter} tries.");
+            Console.ReadLine();
+            Console.Clear();
         }
     }
 }
